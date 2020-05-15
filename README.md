@@ -1,13 +1,13 @@
 
 V0 TODOs (V0 Ship Date: May 16, 2020)
 ---
-[] Buttons should have activated/deactivated states, that controls the app list.
-[] Script to generate react code from airtable csv (https://airtable.com/tblHn09UVJLxakGnp/viwQGA5gOsVOvhBz9), message Sasha on slack for Access if you cannot see it.
-[] Deployment Setup
+* Buttons should have activated/deactivated states, that controls the app list.
+* Script to generate react code from airtable csv (https://airtable.com/tblHn09UVJLxakGnp/viwQGA5gOsVOvhBz9), message Sasha on slack for Access if you cannot see it.
+* Deployment Setup
 
 V1 TODOs (V1 Ship Date: later)
---
-[] Add a header similar to the testandtrace.com
+----
+* Add a header similar to the testandtrace.com
 
 
 
