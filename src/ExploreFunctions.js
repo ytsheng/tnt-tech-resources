@@ -7,8 +7,11 @@ class ExploreFunctions extends React.Component {
     return (
         <div>
             <p className="ExploreFunctions-header">Explore Functions:</p>
-            <AppFunction className="Appfunction" name="Exposure Notification" activated={true}/>
-            <AppFunction className="Appfunction" name="Manual Contact Tracing" activated={true}/>
+            <AppFunction name="Exposure Notification" activated={true}/>
+            {' '}
+            <AppFunction name="Manual Contact Tracing" activated={true}/>
+            {' '}
+            <AppFunction name="Symptom Reporting" activated={true}/>
         </div>
     );
   }
