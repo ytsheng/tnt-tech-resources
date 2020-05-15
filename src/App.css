@@ -13,8 +13,13 @@
   }
 }
 
+.App-content {
+  margin-left: 88px;
+  margin-right: 88px;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
