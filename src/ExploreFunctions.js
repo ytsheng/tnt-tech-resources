@@ -7,11 +7,23 @@ class ExploreFunctions extends React.Component {
     return (
         <div>
             <p className="ExploreFunctions-header">Explore Functions:</p>
-            <AppFunction name="Exposure Notification" activated={true}/>
+            <AppFunction
+              id="exposure_notification"
+              name="Exposure Notification"
+              activated={this.props.settings["exposure_notification"]}
+              onClick={(data) => this.props.onClick(data)}/>
             {' '}
-            <AppFunction name="Manual Contact Tracing" activated={true}/>
+            <AppFunction
+              id="manual_contact_tracing"
+              name="Manual Contact Tracing"
+              activated={this.props.settings["manual_contact_tracing"]}
+              onClick = {(data) => this.props.onClick(data)}/>
             {' '}
-            <AppFunction name="Symptom Reporting" activated={true}/>
+            <AppFunction
+              id="symptom_reporting"
+              name="Symptom Reporting"
+              activated={this.props.settings["symptom_reporting"]}
+              onClick={(data) => this.props.onClick(data)}/>
         </div>
     );
   }
