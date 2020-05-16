@@ -8,8 +8,9 @@ class AppItemDetails extends React.Component {
       <Tabs customStyle={customStyle}>
         <TabList>
           <Tab className="Tab-header">Details</Tab>
-          <Tab className="Tab-header">Tab2</Tab>
-          <Tab className="Tab-header">Tab3</Tab>
+          <Tab className="Tab-header">Functions</Tab>
+          <Tab className="Tab-header">States Adoption</Tab>
+          <Tab className="Tab-header">Target/Intended User Type</Tab>
         </TabList>
         <PanelList>
           <Panel>
@@ -20,6 +21,11 @@ class AppItemDetails extends React.Component {
           <Panel>
             Officiis commodi facilis optio eum aliquam.<br/>
             Tempore libero sit est architecto voluptate. Harum dolor modi deleniti animi qui similique facilis. Sit delectus voluptatem praesentium recusandae neque quo quod.
+          </Panel>
+          <Panel>
+            Ut voluptas a voluptas quo ut dolorum.<br/>
+            Dolorem sint velit explicabo sunt distinctio dolorem adipisci tempore.<br/>
+            Est repellat quis magnam quo nihil amet et. Iste consequatur architecto quam neque suscipit.
           </Panel>
           <Panel>
             Ut voluptas a voluptas quo ut dolorum.<br/>

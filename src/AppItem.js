@@ -10,24 +10,21 @@ class AppItem extends React.Component {
               <strong><a href="https://ndresponse.gov/covid-19-resources/care19">Care19</a></strong>
             </h3>
             <br/>
-            <table className="Table" class="fixed">
-                <col width="300px" />
-                <col width="300px" />
-                <col width="300px" />
-                <col width="300px" />
-                <col width="300px" />
+            <table className="Table">
                 <tbody>
-                    <td className="Cell-header"><strong>Platform</strong></td>
-                    <td className="Cell-header"><strong>Free</strong></td>
-                    <td className="Cell-header"><strong>Opt-in/Opt-out</strong></td>
-                    <td className="Cell-header"><strong>Launch Date</strong></td>
-                    <td className="Cell-header"><strong>Apple/Google API Compliant</strong></td>
                     <tr>
-                        <td className="Cell">iOS, Android</td>
-                        <td className="Cell">Yes</td>
-                        <td className="Cell">Opt-in</td>
-                        <td className="Cell">Currently Available</td>
-                        <td className="Cell">Planned</td>
+                        <td className="Cell-header"><strong>Supported Platforms</strong></td>
+                        <td className="Cell-header"><strong>Free</strong></td>
+                        <td className="Cell-header"><strong>Opt-in/Opt-out</strong></td>
+                        <td className="Cell-header"><strong>App Release Status</strong></td>
+                        <td className="Cell-header"><strong>Exposure Notification API Compliant</strong></td>
+                    </tr>
+                    <tr>
+                        <td className="Cell">{this.props.platforms}</td>
+                        <td className="Cell">{this.props.is_free}</td>
+                        <td className="Cell">{this.props.is_optin}</td>
+                        <td className="Cell">{this.props.status}</td>
+                        <td className="Cell">{this.props.en_api}</td>
                     </tr>
                 </tbody>
             </table>

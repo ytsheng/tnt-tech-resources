@@ -5,10 +5,34 @@ class AppList extends React.Component {
   render() {
     return (
       <div>
-        <AppItem/>
-        <AppItem/>
-        <AppItem/>
-        <AppItem/>
+        <AppItem
+          platforms={"iOS, Android"}
+          is_free={"Yes"}
+          is_optin={"Yes"}
+          status={"Currently Available"}
+          en_api={"Planned"}
+        />
+        <AppItem
+          platforms={"iOS, Android"}
+          is_free={"Yes"}
+          is_optin={"Yes"}
+          status={"Currently Available"}
+          en_api={"Planned"}
+        />
+        <AppItem
+          platforms={"iOS, Android"}
+          is_free={"Yes"}
+          is_optin={"Yes"}
+          status={"Currently Available"}
+          en_api={"Planned"}
+        />
+        <AppItem
+          platforms={"iOS, Android"}
+          is_free={"Yes"}
+          is_optin={"Yes"}
+          status={"Currently Available"}
+          en_api={"Planned"}
+        />
       </div>
     );
   }

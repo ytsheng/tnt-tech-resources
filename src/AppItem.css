@@ -16,6 +16,7 @@
   padding: 4px;
   text-align: left;
   text-emphasis: 5;
+  width: 300px;
 }
 
 table.fixed { table-layout:fixed; }
