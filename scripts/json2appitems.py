@@ -15,7 +15,7 @@ def field2appitem(field, function_id_set):
     function_ids = [("_").join(function.lower().strip().split()) for function in functions]
     function_id_set.update(function_ids)
     filter_condition = "false" if len(function_ids) == 0 else " && ".join([f"this.props.filter['{fid}']" for fid in function_ids])
-    return (f' {filter_condition} ?\
+    return f'{filter_condition} ?\
 <AppItem\
     name={{\"{field["Solution Name"]}\"}}\
     functions={{\"{"Not populated" if len(functions) == 0 else ", ".join(functions)}\"}}\
@@ -27,9 +27,17 @@ def field2appitem(field, function_id_set):
     details={{\"{"Not populated" if "How it works?" not in field else field["How it works?"] }\"}} \
     state_adoption={{\"{"Not populated" if "Adoption" not in field else field["Adoption"]}\"}} \
     target_audience={{\"{"Not populated" if "Target Audience" not in field else field["Target Audience"]}\"}} \
-/> : \
-<div/> \
-    ')
+/> : <div/>'
+
+def appfunctionlist(function_id_set):
+    return '\n{\" \"}\n'.join([f'<AppFunction \
+id=\"{fid}\" \
+name=\"{function_name_from_id(fid)} \" \
+activated={{this.props.settings["{fid}"]}} \
+onClick={{(data) => this.props.onClick(data)}}/>' for fid in function_id_set])
+
+def function_name_from_id(fid):
+    return " ".join([word[0].upper() + word[1:] for word in fid.split('_')])
 
 def main():
     data = read_json("../../applist.json")
@@ -41,6 +49,7 @@ def main():
     # To be filled in the AppList.js
     # print(applist)
     # To be filled in ExploreFunctions.js
-    print(function_set)
+    print(appfunctionlist(function_set))
+    # print(function_set)
 
 main()
