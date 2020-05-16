@@ -7,7 +7,7 @@ class AppItem extends React.Component {
     return (
         <div>
             <h3>
-              <strong><a href="https://ndresponse.gov/covid-19-resources/care19">Care19</a></strong>
+              <strong><a href="">{this.props.name}</a></strong>
             </h3>
             <br/>
             <table className="Table">
@@ -29,7 +29,12 @@ class AppItem extends React.Component {
                 </tbody>
             </table>
             <br/>
-            <AppItemDetails/>
+            <AppItemDetails
+                details={this.props.details}
+                functions={this.props.functions}
+                state_adoption={this.props.state_adoption}
+                target_audience={this.props.target_audience}
+            />
             <br/>
         </div>
     );

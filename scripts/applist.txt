@@ -1,11 +1,213 @@
-import React from 'react';
-import AppItem from './AppItem';
+number of apps: 104
+Virus Trackers
+exposure_notification
+Corona Trace
+exposure_notification
+Covid World
+exposure_notification
+SOS
+exposure_notification
+Covidcheck
+symptom_checker
+How We Feel
+symptom_checker
+Citizen
+exposure_notification
+NHSX 
+exposure_notification
+CycleBreak
 
-class AppList extends React.Component {
-  render() {
-    return (
-      <div>
-      <div>{ this.props.filter['exposure_notification'] ?<AppItem    name={"Virus Trackers"}    functions={"Exposure Notification"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"Unknown"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"Not populated"} /> : <div/>     }</div>
+Infection Chain
+exposure_notification
+Covi-Id
+health_passport_/_immunity_passport
+Stopp Corona App
+exposure_notification
+Accenture
+exposure_notification
+Covid Symptom Tracker
+exposure_notification
+Gears Malaysia App
+exposure_notification, movement_tracking
+CoEpi
+exposure_notification, symptom_reporting
+ViruSafe
+
+Zerobase
+exposure_notification
+Covapp
+exposure_notification, symptom_reporting
+Covid Flutter
+exposure_notification
+COVIDSafe App
+exposure_notification
+Shares.vc App
+exposure_notification
+Aarogya Setu App
+exposure_notification
+CovidWatch
+exposure_notification
+Privacy Preserving Proven Prior Proximity Protocol (P6)
+exposure_notification
+SafeMap
+exposure_notification
+AITIA
+exposure_notification, symptom_reporting
+CommCare for COVID-19
+post-care_support, lab_logistics, manual_contact_tracing
+CRISP
+
+Georgia Web Portal
+symptom_reporting
+Coronika App
+exposure_notification
+GH Covid-19 Tracker App
+exposure_notification
+Corona Network
+exposure_notification
+StopKorona! App
+exposure_notification
+HaMagen
+exposure_notification
+Cubeiq
+exposure_notification
+#Masks4all
+information_and_statistics, policy
+SafePassCV / KeypassCV
+symptom_checker, health_passport_/_immunity_passport, exposure_notification
+Work.com
+manual_contact_tracing_support, symptom_checker, business_readiness
+WHO Sponsored App
+exposure_notification, symptom_checker
+Corona GO App
+
+Pandoa
+exposure_notification
+safer.me
+
+Cit
+
+Pandemic.Events
+exposure_notification
+PathCheck (Safe Paths: PrivateKit)
+exposure_notification
+AU Health ExpressCare
+symptom_reporting
+BanDemic
+exposure_notification
+CoWin-20 / Corona Kavach
+exposure_notification
+MySejahtera App
+information_and_statistics
+Cotect
+exposure_notification
+Novid
+exposure_notification
+Maven
+manual_contact_tracing
+SafeTraceAPI
+exposure_notification
+Corotrack
+exposure_notification, symptom_reporting
+Coronastatus
+exposure_notification, symptom_reporting
+Covid-19-Track
+exposure_notification, symptom_reporting
+HSE Covid-19 App
+
+Estimote
+exposure_notification
+Coronatrace
+exposure_notification, symptom_reporting
+Telegram CT
+exposure_notification, symptom_reporting
+CrowdsourceRescue
+exposure_notification
+Corona Map Saudi Arabi App
+information_and_statistics
+CoronApp
+exposure_notification
+Coalition
+
+Covid-App
+exposure_notification
+CoronaPass
+health_passport_/_immunity_passport
+SaraAlert
+manual_contact_tracing
+Coronamap
+exposure_notification
+MyLog14
+exposure_notification
+CovidCred
+health_passport_/_immunity_passport
+Salesforce
+manual_contact_tracing
+Corona Data Scraper
+exposure_notification
+FeverMap
+exposure_notification
+Sneeze Map
+exposure_notification, symptom_reporting
+MIT Safe Paths
+exposure_notification
+Healthy Together
+exposure_notification, manual_contact_tracing, locate_testing_centers, lab_logistics
+EH: Africa CT Solution
+exposure_notification
+Ghana Health Services App
+exposure_notification
+Merit
+health_passport_/_immunity_passport
+NextTrace
+manual_contact_tracing
+Safetrace
+exposure_notification
+Code Orange
+exposure_notification
+Redpad
+manual_contact_tracing
+Private Tracer
+
+eRouska (eFacemask) App
+
+Mask.ir 
+exposure_notification
+Smittestopp App
+
+Alipay App
+exposure_notification
+Trace Together
+exposure_notification
+BeAware Bahrain App
+exposure_notification
+Care19
+exposure_notification
+Nextstrain
+
+COVID Symptom Study
+symptom_checker, information_and_statistics
+Twilio
+manual_contact_tracing
+CovidSafe
+exposure_notification, symptom_reporting
+Mila 
+exposure_notification
+Memiah
+exposure_notification
+GeoHealth
+exposure_notification
+Swiss Contact Tracing App
+
+Covid Near You
+exposure_notification, symptom_reporting
+MyTrace App
+exposure_notification
+Test and Trace
+
+Gesund  Zusammen
+exposure_notification
+<div>{ this.props.filter['exposure_notification'] ?<AppItem    name={"Virus Trackers"}    functions={"Exposure Notification"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"Unknown"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"Not populated"} /> : <div/>     }</div>
 <div>{ this.props.filter['exposure_notification'] ?<AppItem    name={"Corona Trace"}    functions={"Exposure Notification"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"Beta"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"Not populated"} /> : <div/>     }</div>
 <div>{ this.props.filter['exposure_notification'] ?<AppItem    name={"Covid World"}    functions={"Exposure Notification"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"Released"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"Not populated"} /> : <div/>     }</div>
 <div>{ this.props.filter['exposure_notification'] ?<AppItem    name={"SOS"}    functions={"Exposure Notification"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"In Development"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"['General Public']"} /> : <div/>     }</div>
@@ -109,9 +311,3 @@ class AppList extends React.Component {
 <div>{ this.props.filter['exposure_notification'] ?<AppItem    name={"MyTrace App"}    functions={"Exposure Notification"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"Released"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"Not populated"} /> : <div/>     }</div>
 <div>{ false ?<AppItem    name={"Test and Trace"}    functions={"Not populated"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"Unknown"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"Not populated"} /> : <div/>     }</div>
 <div>{ this.props.filter['exposure_notification'] ?<AppItem    name={"Gesund  Zusammen"}    functions={"Exposure Notification"}    platforms={"Not populated"}    is_free={"Not populated"}    is_optin={"Not populated"}    status={"Unknown"}    en_api={"Not populated"}     details={"Not populated"}     state_adoption={"Not populated"}     target_audience={"Not populated"} /> : <div/>     }</div>
-      </div>
-    );
-  }
-}
-
-export default AppList;

@@ -12,6 +12,15 @@ class App extends React.Component {
       exposure_notification: true,
       symptom_reporting: false,
       manual_contact_tracing: true,
+      symptom_checker: true,
+      lab_logistics: true,
+      information_and_statistics: true,
+      locate_testing_centers: true,
+      policy: true,
+      postcare_support: true,
+      business_readiness: true,
+      immunity_passport: true,
+      movement_tracking: true,
     };
   }
 
