@@ -1,6 +1,7 @@
 import json
 import requests
 
+no_data = "Data Unavailable"
 
 def read_json(file_path):
     with open(file_path) as f:
@@ -21,7 +22,7 @@ def field2appitem(field, function_id_set):
     name={{\"{field["Solution Name"]}\"}}\
     homepage={{\"{"" if "Homepage" not in field or len(field["Homepage"]) == 0 else fetchLink(field["Homepage"][0])}\"}}\
     details={{\"{formattedText(field, "Description", False).strip()}\"}}\
-    functions={{\"{"Not populated" if len(functions) == 0 else ", ".join(functions)}\"}}\
+    functions={{\"{no_data if len(functions) == 0 else ", ".join(functions)}\"}}\
     platforms={{\"{formattedTextFromList(field, "Supported Platforms")}\"}}\
     is_free={{\"{formattedText(field, "Free?")}\"}}\
     is_optin={{\"{formattedText(field, "User Installation Required?")}\"}}\
@@ -41,12 +42,12 @@ def fetchLink(link_id):
     return data["fields"]["URL"]
 
 def formattedTextFromList(field, col):
-    return "Not populated" if col not in field or len(field[col]) == 0 else ", ".join(field[col])
+    return no_data if col not in field or len(field[col]) == 0 else ", ".join(field[col])
 
 def formattedText(field, col, binary=True):
     if binary:
-        return "Not populated" if col not in field else ("Yes" if field[col] else "No")
-    return "Not populated" if col not in field else field[col]
+        return no_data if col not in field else ("Yes" if field[col] else "No")
+    return no_data if col not in field else field[col]
 
 
 def appfunctionlist(function_id_set):
