@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './tnt-logo.png';
 import './App.css';
 import ExploreFunctions from './ExploreFunctions'
 import AppList from './AppList'
@@ -29,11 +29,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App-content">
-        <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)}/>
-        <br/>
-        <br/>
-        <AppList filter={this.state}/>
+      <div>
+        <div>
+          <img src={logo} alt="logo" />
+        </div>
+        <div className="App-content">
+          <h1></h1>
+          <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)}/>
+          <br/>
+          <br/>
+          <AppList filter={this.state}/>
+        </div>
       </div>
     );
   }
