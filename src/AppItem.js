@@ -12,9 +12,9 @@ class AppItem extends React.Component {
     }
     return (
         <div>
-            <h3>
+            <h1>
               <strong>{name}</strong>
-            </h3>
+            </h1>
             <br/>
             <table className="Table">
                 <tbody>

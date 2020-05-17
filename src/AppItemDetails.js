@@ -1,32 +1,22 @@
 import React from 'react';
-import {Tabs, TabList, Tab, PanelList, Panel} from 'react-tabtab';
-import * as customStyle from 'react-tabtab/lib/themes/bulma';
+const ReactDOM = require('react-dom')
+const ReactMarkdown = require('react-markdown')
+
 
 class AppItemDetails extends React.Component {
   render() {
+    const input = `
+#### Details
+${this.props.details}
+#### Functions
+${this.props.functions}
+#### States Adoption
+${this.props.state_adoption}
+#### Target User Type
+${this.props.target_audience}
+`;
     return (
-      <Tabs customStyle={customStyle}>
-        <TabList>
-          <Tab className="Tab-header">Details</Tab>
-          <Tab className="Tab-header">Functions</Tab>
-          <Tab className="Tab-header">States Adoption</Tab>
-          <Tab className="Tab-header">Target User Type</Tab>
-        </TabList>
-        <PanelList>
-          <Panel>
-            {this.props.details}
-          </Panel>
-          <Panel>
-            {this.props.functions}
-          </Panel>
-          <Panel>
-            {this.props.state_adoption}
-          </Panel>
-          <Panel>
-            {this.props.target_audience}
-          </Panel>
-        </PanelList>
-      </Tabs>
+      <ReactMarkdown source={input} />
     )
   }
 }
