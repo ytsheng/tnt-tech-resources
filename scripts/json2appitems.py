@@ -21,7 +21,7 @@ def field2appitem(field, function_id_set):
 <AppItem\
     name={{\"{field["Solution Name"]}\"}}\
     homepage={{\"{"" if "Homepage" not in field or len(field["Homepage"]) == 0 else fetchLink(field["Homepage"][0])}\"}}\
-    details={{\"{formattedText(field, "Description", False).strip()}\"}}\
+    details={{`{formattedText(field, "Description", False).strip()}`}}\
     functions={{\"{no_data if len(functions) == 0 else ", ".join(functions)}\"}}\
     platforms={{\"{formattedTextFromList(field, "Supported Platforms")}\"}}\
     is_free={{\"{formattedText(field, "Free?")}\"}}\
