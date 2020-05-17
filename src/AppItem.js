@@ -4,18 +4,24 @@ import AppItemDetails from './AppItemDetails';
 
 class AppItem extends React.Component {
   render() {
+    var name;
+    if (this.props.homepage.length > 0) {
+      name = <a href={this.props.homepage}>{this.props.name}</a>
+    } else {
+      name = <div>{this.props.name}</div>
+    }
     return (
         <div>
             <h3>
-              <strong><a href="">{this.props.name}</a></strong>
+              <strong>{name}</strong>
             </h3>
             <br/>
             <table className="Table">
                 <tbody>
                     <tr>
-                        <td className="Cell-header"><strong>Supported Platforms</strong></td>
-                        <td className="Cell-header"><strong>Free</strong></td>
-                        <td className="Cell-header"><strong>Opt-in/Opt-out</strong></td>
+                        <td className="Cell-header"><strong>What platforms is it on?</strong></td>
+                        <td className="Cell-header"><strong>Free?</strong></td>
+                        <td className="Cell-header"><strong>User Installation Required?</strong></td>
                         <td className="Cell-header"><strong>App Release Status</strong></td>
                         <td className="Cell-header"><strong>Exposure Notification API Compliant</strong></td>
                     </tr>

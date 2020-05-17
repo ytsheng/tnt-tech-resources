@@ -8,7 +8,7 @@ class AppFunction extends React.Component {
     var button;
     if (this.props.activated) {
       button = <Button
-        className="Appfunction-button"
+        className="mb-2"
         variant="primary"
         size="lg"
         onClick={() => this.onClick(this.props.id)}>
@@ -16,7 +16,7 @@ class AppFunction extends React.Component {
       </Button>
     } else {
       button = <Button
-        className="Appfunction-button"
+        className="mb-2"
         variant="secondary"
         size="lg"
         onClick={() => this.onClick(this.props.id)}>

@@ -10,6 +10,7 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
     "react-scripts": "3.4.1",
     "react-tabtab": "^2.0.0",
     "styled-components": "^4.4.1"

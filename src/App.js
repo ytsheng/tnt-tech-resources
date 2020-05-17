@@ -9,18 +9,21 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      exposure_notification: true,
+      exposure_notification: false,
       symptom_reporting: false,
       manual_contact_tracing: true,
-      symptom_checker: true,
-      lab_logistics: true,
-      information_and_statistics: true,
-      locate_testing_centers: true,
-      policy: true,
-      postcare_support: true,
-      business_readiness: true,
-      immunity_passport: true,
-      movement_tracking: true,
+      symptom_checker: false,
+      symptom_reporting: false,
+      lab_logistics: false,
+      information_and_statistics: false,
+      locate_testing_centers: false,
+      policy: false,
+      postcare_support: false,
+      business_readiness: false,
+      immunity_passport: false,
+      movement_tracking: false,
+      postcare_support: false,
+      immunity_passport: false,
     };
   }
 
