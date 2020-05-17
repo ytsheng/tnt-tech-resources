@@ -15,20 +15,20 @@ def field2appitem(field, function_id_set):
     functions = [] if "Functions" not in field else [function for function in field["Functions"]]
     function_ids = [("_").join(function.lower().strip().split()) for function in functions]
     function_id_set.update(function_ids)
-    filter_condition = "false" if len(function_ids) == 0 else " && ".join([f"this.props.filter['{fid}']" for fid in function_ids])
+    filter_condition = "false" if len(function_ids) == 0 else " || ".join([f"this.props.filter['{fid}']" for fid in function_ids])
     return f'{filter_condition} ? \
 <AppItem\
     name={{\"{field["Solution Name"]}\"}}\
     homepage={{\"{"" if "Homepage" not in field or len(field["Homepage"]) == 0 else fetchLink(field["Homepage"][0])}\"}}\
+    details={{\"{formattedText(field, "Description", False).strip()}\"}}\
     functions={{\"{"Not populated" if len(functions) == 0 else ", ".join(functions)}\"}}\
-    platforms={{\"{formattedText(field, "Supported Platforms", False)}\"}}\
+    platforms={{\"{formattedTextFromList(field, "Supported Platforms")}\"}}\
     is_free={{\"{formattedText(field, "Free?")}\"}}\
     is_optin={{\"{formattedText(field, "User Installation Required?")}\"}}\
     status={{\"{formattedText(field, "Project Status", False)}\"}}\
     en_api={{\"{formattedText(field, "Exposure Notifications API", False)}\"}} \
-    details={{\"{formattedText(field, "How it works?", False)}\"}} \
     state_adoption={{\"{formattedText(field, "Adoption", False)}\"}} \
-    target_audience={{\"{formattedText(field, "Target Audience", False)}\"}} \
+    target_audience={{\"{formattedTextFromList(field, "Target Audience")}\"}} \
 /> : <div/>'
 
 #  homepage={{\"{"Not populated" if "Homepage" not in field else fetchLink(field["Homepage"])}\"}}\
@@ -39,6 +39,9 @@ def fetchLink(link_id):
     req = requests.get(LINKS_API_URL, headers=AUTH)
     data = req.json()
     return data["fields"]["URL"]
+
+def formattedTextFromList(field, col):
+    return "Not populated" if col not in field or len(field[col]) == 0 else ", ".join(field[col])
 
 def formattedText(field, col, binary=True):
     if binary:

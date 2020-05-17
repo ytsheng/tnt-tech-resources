@@ -6,15 +6,13 @@ class AppItem extends React.Component {
   render() {
     var name;
     if (this.props.homepage.length > 0) {
-      name = <a href={this.props.homepage}>{this.props.name}</a>
+      name = <strong><a href={this.props.homepage}>{this.props.name}</a></strong>
     } else {
-      name = <div>{this.props.name}</div>
+      name = <strong>{this.props.name}</strong>
     }
     return (
         <div>
-            <h1>
-              <strong>{name}</strong>
-            </h1>
+            <h1>{name}</h1>
             <br/>
             <table className="Table">
                 <tbody>
