@@ -20,12 +20,24 @@
 
 .App-header {
   background-color: #fafafa;
-  min-height: 100vh;
   display: flex;
+  font-weight: 48px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(30px + 2vmin);
+  color: black;
+}
+
+.App-header-intro {
+  background-color: #fafafa;
+  display: flex;
+  font-weight: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: calc(8px + 2vmin);
   color: black;
 }
 
