@@ -19,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #fafafa;
+  background-color: #ffffff;
   display: flex;
   font-weight: 48px;
   flex-direction: column;
@@ -30,7 +30,7 @@
 }
 
 .App-header-intro {
-  background-color: #fafafa;
+  background-color: #ffffff;
   display: flex;
   font-weight: 12px;
   flex-direction: column;
