@@ -37,12 +37,9 @@ def load_data():
     while data.get('offset'):
         params['offset'] = data['offset']
         req = requests.get(API_URL, headers=AUTH, params=params)
-        print('offset=%s url=%s request=%s' % (params['offset'], API_URL, req))
         data = req.json()
         rval['records'] += data.get('records', [])
-    print('loaded %s records' % (len(rval.get('records', []))))
     return rval
-
 
 def write_json(data):
     '''
