@@ -1,0 +1,17 @@
+.ExploreFunctions-header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.ExploreFunctions-pill {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Appfunction {
+    margin-left: 20px;
+}
