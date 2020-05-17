@@ -48,6 +48,20 @@ def formattedText(field, col, binary=True):
         return "Not populated" if col not in field else ("Yes" if field[col] else "No")
     return "Not populated" if col not in field else field[col]
 
+def rateAppItem(app_item):
+    criteria_cols = ['Adoption','Free?','User Installation Required?',
+                     'Supported Platforms','Functions','Homepage',
+                     'Description','Target Audience','Exposure Notifications API']
+    populated_fields = set(criteria_cols).intersection(set(app_item.keys()))
+    empty_fields = set(criteria_cols).difference(set(app_item.keys()))
+    num_populated = len(populated_fields) # calculates number of populated fields for an app_item
+    return num_populated
+
+def sortAppItems(records):
+    records_sorted = sorted(records.items(), reverse=True,
+                            key=lambda x: (rateAppItem(x[1]), x[1]['Solution Name']))
+    # sorts first on number of populated fields, then on name of solution
+    return records
 
 def appfunctionlist(function_id_set):
     return '\n{\" \"}\n'.join([f'<AppFunction \
@@ -63,6 +77,8 @@ def main():
     data = read_json("../../applist.json")
     fields = fieldsFromData(data["records"], "App")
     print(f"number of apps: {len(fields)}")
+    fields = sortAppItems(fields)
+    # RATE+SORT HERE
     function_set = set()
     app_items = [field2appitem(f, function_set) for f in fields]
     applist = "\n".join(["<div>{" + app_item + "}</div>" for app_item in app_items])
