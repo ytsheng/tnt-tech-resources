@@ -57,11 +57,11 @@ def rateAppItem(app_item):
     num_populated = len(populated_fields) # calculates number of populated fields for an app_item
     return num_populated
 
-def sortAppItems(records):
-    records_sorted = sorted(records.items(), reverse=True,
-                            key=lambda x: (rateAppItem(x[1]), x[1]['Solution Name']))
+def sortAppItems(fields):
+    fields_sorted = sorted(fields, reverse=True,
+                           key=lambda x: (rateAppItem(x), x['Solution Name']))
     # sorts first on number of populated fields, then on name of solution
-    return records
+    return fields_sorted
 
 def appfunctionlist(function_id_set):
     return '\n{\" \"}\n'.join([f'<AppFunction \
@@ -78,7 +78,6 @@ def main():
     fields = fieldsFromData(data["records"], "App")
     print(f"number of apps: {len(fields)}")
     fields = sortAppItems(fields)
-    # RATE+SORT HERE
     function_set = set()
     app_items = [field2appitem(f, function_set) for f in fields]
     applist = "\n".join(["<div>{" + app_item + "}</div>" for app_item in app_items])
