@@ -31,7 +31,11 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <a href="https://www.testandtrace.com"><img src={logo} alt="logo" /> #TestAndTrace Homepage </a>
+					<div class="fixed-header">
+						<div class="container">
+          		<a href="https://www.testandtrace.com"><img src={logo} alt="logo" /> #TestAndTrace Homepage </a>
+						</div>
+					</div>
           <br/>
           <h1 className="App-header">The Best Contact Tracing Tech Resources</h1>
         </div>
