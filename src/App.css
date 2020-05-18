@@ -27,6 +27,7 @@
   justify-content: center;
   font-size: calc(30px + 2vmin);
   color: black;
+	margin-top: 150px;
 }
 
 .App-header-intro {
@@ -43,6 +44,20 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container{
+	margin: 0 auto;
+}
+
+.fixed-header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: white;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px px 10px rgba(0,0,0,0.1);
 }
 
 @keyframes App-logo-spin {
