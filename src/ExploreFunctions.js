@@ -8,9 +8,9 @@ class ExploreFunctions extends React.Component {
         <div>
             <p className="ExploreFunctions-header">Explore Functions:</p>
             <p>click on any type(s) of apps you are looking for</p>
-<AppFunction id="symptom_reporting" name="Symptom Reporting" activated={this.props.settings["symptom_reporting"]} onClick={(data) => this.props.onClick(data)}/>
-{" "}
 <AppFunction id="manual_contact_tracing" name="Manual Contact Tracing" activated={this.props.settings["manual_contact_tracing"]} onClick={(data) => this.props.onClick(data)}/>
+{" "}
+<AppFunction id="symptom_reporting" name="Symptom Reporting" activated={this.props.settings["symptom_reporting"]} onClick={(data) => this.props.onClick(data)}/>
 {" "}
 <AppFunction id="lab_logistics" name="Lab Logistics" activated={this.props.settings["lab_logistics"]} onClick={(data) => this.props.onClick(data)}/>
 {" "}

@@ -39,7 +39,7 @@ class App extends React.Component {
         <br/>
         <div className="App-content">
           <p className="App-header-intro">Entrepreneurs, app developers, government agencies and more are working on a range of technologies for containing the COVID-19 outbreak in the United States.They include mobile and web-based solutions designed to facilitate activities such as contact tracing and screening for symptoms of the coronavirus.</p>
-          <p className="App-header-intro">The following list covers the all technological applications that are COVID-19 related.</p>
+          <p className="App-header-intro">The following list covers all technological applications that are COVID-19 related.</p>
           <br/>
           <br/>
           <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)}/>
