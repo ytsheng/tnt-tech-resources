@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tnt-tech-resources/static/css/main.802f87f2.chunk.css",
-    "main.js": "/tnt-tech-resources/static/js/main.b07f99f5.chunk.js",
-    "main.js.map": "/tnt-tech-resources/static/js/main.b07f99f5.chunk.js.map",
+    "main.js": "/tnt-tech-resources/static/js/main.26f78699.chunk.js",
+    "main.js.map": "/tnt-tech-resources/static/js/main.26f78699.chunk.js.map",
     "runtime-main.js": "/tnt-tech-resources/static/js/runtime-main.5ee78e9b.js",
     "runtime-main.js.map": "/tnt-tech-resources/static/js/runtime-main.5ee78e9b.js.map",
     "static/css/2.af3c1da9.chunk.css": "/tnt-tech-resources/static/css/2.af3c1da9.chunk.css",
     "static/js/2.e87cac6b.chunk.js": "/tnt-tech-resources/static/js/2.e87cac6b.chunk.js",
     "static/js/2.e87cac6b.chunk.js.map": "/tnt-tech-resources/static/js/2.e87cac6b.chunk.js.map",
     "index.html": "/tnt-tech-resources/index.html",
-    "precache-manifest.d36e35ecc34b471ec43d39b7c36b7666.js": "/tnt-tech-resources/precache-manifest.d36e35ecc34b471ec43d39b7c36b7666.js",
+    "precache-manifest.d12000b4e3d220212bab7a311b867cec.js": "/tnt-tech-resources/precache-manifest.d12000b4e3d220212bab7a311b867cec.js",
     "service-worker.js": "/tnt-tech-resources/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/tnt-tech-resources/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.802f87f2.chunk.css.map": "/tnt-tech-resources/static/css/main.802f87f2.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.e87cac6b.chunk.js",
     "static/css/main.802f87f2.chunk.css",
-    "static/js/main.b07f99f5.chunk.js"
+    "static/js/main.26f78699.chunk.js"
   ]
 }

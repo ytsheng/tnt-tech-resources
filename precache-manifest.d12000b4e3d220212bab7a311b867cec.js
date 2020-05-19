@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a420fcdd6f682e73b81b91e47844fe3d",
+    "revision": "0258b41fde3d75db4cd9b3a69abaceb4",
     "url": "/tnt-tech-resources/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tnt-tech-resources/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "273e49a4798edaf13402",
+    "revision": "1bd721b9747edcbf2b2e",
     "url": "/tnt-tech-resources/static/css/main.802f87f2.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tnt-tech-resources/static/js/2.e87cac6b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "273e49a4798edaf13402",
-    "url": "/tnt-tech-resources/static/js/main.b07f99f5.chunk.js"
+    "revision": "1bd721b9747edcbf2b2e",
+    "url": "/tnt-tech-resources/static/js/main.26f78699.chunk.js"
   },
   {
     "revision": "f68412e92986eb052bef",
