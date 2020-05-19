@@ -50,7 +50,7 @@
 	background-color: #3ba4a0;
 	color: white!important;
 	border-radius: 40px;
-	padding: 18px 35px;
+	padding: 15px 35px;
 	margin-top: 0;
 }
 
@@ -75,8 +75,8 @@
 }
 
 .nav{
-	margin-left: 95px;
-	margin-right: 95px;
+	margin-left: 100px;
+	margin-right: 100px;
 	max-width: 1200px;
 	margin: auto;
 	font-weight: 600;
@@ -96,7 +96,7 @@ li {
 }
 
 li a{
-	display: inline-block;
+	display: block;
 	color: black;
 	padding-right: 22px;
 	text-decoration: none;
