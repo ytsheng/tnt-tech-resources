@@ -32,36 +32,29 @@ class App extends React.Component {
       <div>
         <div>
 					<div class="fixed-header">
-						<div class="container">
-							<div class="logo_container">
-          			<a href="https://www.testandtrace.com">
-									<img src={logo} alt="logo" width="325.5" height="93"/>
-								</a>
-							</div>
-							<div id="top-menu">
-								<nav id="top-menu-nav">
-									<ul class="nav">
-										<li>
-											<a href="https://testandtrace.com/the-full-explanation">Overview</a>
-										</li>
-										<li>
-											<a href="https://testandtrace.com/state-data/">US State Data</a>
-										</li>
-										<li>
-											<a href="https://testandtrace.com/resources">Resources/Guides</a>
-										</li>
-										<li>
-											<a href="https://testandtrace.com/news/">News</a>
-										</li>
-										<li>
-											<a href="https://testandtrace.com/about-test-and-trace/">About Us</a>
-										</li>
-										<li>
-											<a href="https://testandtrace.com/how-you-can-help">How You Can Help</a>
-										</li>
-									</ul>
-								</nav>
-							</div>
+						<div class="nav">
+							<ul>
+								<li class="logo_container">	
+									<a href="https://www.testandtrace.com">
+										<img src={logo} alt="logo" width="325.5" height="93"/>
+									</a>
+								</li>	
+								<li>
+									<a href="https://testandtrace.com/how-you-can-help" class="colored-button">How You Can Help</a>
+								</li>
+								<li>
+									<a href="https://testandtrace.com/about-test-and-trace/">About Us</a>
+								</li>
+								<li>
+									<a href="https://testandtrace.com/resources">Resources/Guides</a>
+								</li>
+								<li>
+									<a href="https://testandtrace.com/state-data/">US State Data</a>
+								</li>
+								<li>
+									<a href="https://testandtrace.com/the-full-explanation">Overview</a>
+								</li>
+							</ul>
 						</div>
 					</div>
           <br/>
