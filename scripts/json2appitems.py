@@ -67,17 +67,22 @@ onClick={{(data) => this.props.onClick(data)}}/>' for fid in function_id_set])
 def function_name_from_id(fid):
     return (" ".join([word[0].upper() + word[1:].strip() for word in fid.split('_')])).strip()
 
+def app_list_header_footer():
+    return "import React from 'react';\nimport AppItem from './AppItem';\n\nclass AppList extends React.Component {\n  render() {\n    return (\n<div>", "</div>\n    );\n  }\n}\n\nexport default AppList;\n"
+
 def main():
     data = read_json("../../applist.json")
     fields = fieldsFromData(data["records"], "App")
-    print(f"number of apps: {len(fields)}")
+    # print(f"number of apps: {len(fields)}")
     fields = sortAppItems(fields)
     function_set = set()
     app_items = [field2appitem(f, function_set) for f in fields]
     applist = "\n".join(["<div>{" + app_item + "}</div>" for app_item in app_items])
-    # To be filled in the AppList.js
-    print(applist)
-    print("======")
+    header, footer = app_list_header_footer()
+
+    with open('../src/AppList.js', 'w') as applist_file:
+        applist_file.write(header + applist + footer)
+
     # To be filled in ExploreFunctions.js
     print(appfunctionlist(function_set))
     # print(function_set)
