@@ -20,7 +20,7 @@ def field2appitem(field, function_id_set):
     return f'{filter_condition} ? \
 <AppItem\
     name={{\"{field["Solution Name"]}\"}}\
-    homepage={{\"{"" if "Homepage" not in field else field["Homepage"][0]}\"}}\
+    homepage={{\"{"" if "Homepage" not in field else field["Homepage"]}\"}}\
     details={{`{formattedText(field, "Description", False).strip()}`}}\
     functions={{\"{no_data if len(functions) == 0 else ", ".join(functions)}\"}}\
     platforms={{\"{formattedTextFromList(field, "Supported Platforms")}\"}}\
