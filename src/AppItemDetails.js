@@ -10,6 +10,10 @@ class AppItemDetails extends React.Component {
 ${this.props.details}
 #### Functions
 ${this.props.functions}
+#### Tech Used
+hi ${this.props.technologies}
+#### Country Coverage
+${this.props.country_coverage}
 #### States Adoption
 ${this.props.state_adoption}
 #### Target User Type

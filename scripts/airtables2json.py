@@ -20,7 +20,7 @@ import boto3
 import requests
 
 API_URL = 'https://api.airtable.com/v0/%s/%s' % (
-    'appJ3duopN1JiFnMA', 'Solutions')
+    'appt7hlmKpFDwsMQS', 'Master')
 AUTH = {'Authorization': 'Bearer %s' % 'keyC5CSzA7yhjjmO2'}
 
 def load_data():

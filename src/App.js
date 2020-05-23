@@ -48,7 +48,7 @@ class App extends React.Component {
           <AppList filter={this.state}/>
           <br/>
           <br/>
-          <p>Made with love by the #testandtrace team. Underlying table source is the <a href="https://airtable.com/tblHn09UVJLxakGnp/viwQGA5gOsVOvhBz9">Pandemic Solutions</a> table.</p>
+          <p>Made with love by the #testandtrace team. Underlying table source is the <a href="https://airtable.com/tblgxtCyYsFZBHdfE/viwoUzldDFDZnm6fo">Covid Tech Solutions</a> table.</p>
           <p>Please join the #tech-resources channel on our <a href="https://testandtrace.slack.com/join/shared_invite/zt-dr5fzg7o-M3g~en8Z1F4o8kX7pOpYtg#/">slack</a> if you are willing to help us improve the data.</p>
           <p>Please join the #engineering channel on our <a href="https://testandtrace.slack.com/join/shared_invite/zt-dr5fzg7o-M3g~en8Z1F4o8kX7pOpYtg#/">slack</a> if you are willing to help us build more features for this website.</p>
         </div>

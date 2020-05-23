@@ -20,26 +20,19 @@ def field2appitem(field, function_id_set):
     return f'{filter_condition} ? \
 <AppItem\
     name={{\"{field["Solution Name"]}\"}}\
-    homepage={{\"{"" if "Homepage" not in field or len(field["Homepage"]) == 0 else fetchLink(field["Homepage"][0])}\"}}\
+    homepage={{\"{"" if "Homepage" not in field else field["Homepage"][0]}\"}}\
     details={{`{formattedText(field, "Description", False).strip()}`}}\
     functions={{\"{no_data if len(functions) == 0 else ", ".join(functions)}\"}}\
     platforms={{\"{formattedTextFromList(field, "Supported Platforms")}\"}}\
-    is_free={{\"{formattedText(field, "Free?")}\"}}\
+    is_free={{\"{formattedText(field, "Revenue Model")}\"}}\
     is_optin={{\"{formattedText(field, "User Installation Required?")}\"}}\
     status={{\"{formattedText(field, "Project Status", False)}\"}}\
-    en_api={{\"{formattedText(field, "Exposure Notifications API", False)}\"}} \
-    state_adoption={{\"{formattedText(field, "Adoption", False)}\"}} \
-    target_audience={{\"{formattedTextFromList(field, "Target Audience")}\"}} \
+    en_api={{\"{formattedText(field, "Exposure Notifications API", False)}\"}}\
+    state_adoption={{\"{formattedTextFromList(field, "Adoption Regions")}\"}} \
+    target_audience={{\"{formattedTextFromList(field, "Target Audience")}\"}}\
+    technologies={{\"{formattedTextFromList(field, "Technologies")}\"}}\
+    country_coverage={{\"{formattedTextFromList(field, "Country Coverage")}\"}}\
 /> : <div/>'
-
-#  homepage={{\"{"Not populated" if "Homepage" not in field else fetchLink(field["Homepage"])}\"}}\
-
-def fetchLink(link_id):
-    LINKS_API_URL = 'https://api.airtable.com/v0/%s/%s/%s' % ('appJ3duopN1JiFnMA', 'Links', link_id)
-    AUTH = {'Authorization': 'Bearer %s' % 'keyC5CSzA7yhjjmO2'}
-    req = requests.get(LINKS_API_URL, headers=AUTH)
-    data = req.json()
-    return data["fields"]["URL"]
 
 def formattedTextFromList(field, col):
     return no_data if col not in field or len(field[col]) == 0 else ", ".join(field[col])
@@ -50,7 +43,7 @@ def formattedText(field, col, binary=True):
     return no_data if col not in field else field[col]
 
 def rateAppItem(app_item):
-    criteria_cols = ['Adoption','Free?','User Installation Required?',
+    criteria_cols = ['Adoption Regions','Revenue Model','User Installation Required?',
                      'Supported Platforms','Functions','Homepage',
                      'Description','Target Audience','Exposure Notifications API']
     populated_fields = set(criteria_cols).intersection(set(app_item.keys()))
