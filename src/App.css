@@ -13,22 +13,6 @@
   }
 }
 
-.App-content {
-  margin-left: 88px;
-  margin-right: 88px;
-}
-
-.App-header {
-  background-color: #ffffff;
-  display: flex;
-  font-weight: 48px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(30px + 2vmin);
-  color: black;
-}
-
 .App-header-intro {
   background-color: #ffffff;
   display: flex;
