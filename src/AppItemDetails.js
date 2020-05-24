@@ -11,7 +11,7 @@ ${this.props.details}
 #### Functions
 ${this.props.functions}
 #### Tech Used
-hi ${this.props.technologies}
+${this.props.technologies}
 #### Country Coverage
 ${this.props.country_coverage}
 #### States Adoption
