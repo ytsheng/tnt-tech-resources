@@ -4,6 +4,8 @@ import './App.css';
 import ExploreFunctions from './ExploreFunctions'
 import AppList from './AppList'
 import styled from '../node_modules/styled-components';
+import {PageView, initGA} from './Tracking';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +28,11 @@ class App extends React.Component {
       postcare_support: false,
       immunity_passport: false,
     };
+  }
+
+  componentDidMount() {
+    initGA('UA-57905986-8');
+    PageView()
   }
 
   render() {
