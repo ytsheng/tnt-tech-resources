@@ -5,6 +5,7 @@ import ExploreFunctions from './ExploreFunctions'
 import AppList from './AppList'
 import styled from '../node_modules/styled-components';
 import {PageView, initGA} from './Tracking';
+import { Tooltip } from '../node_modules/react-tippy';
 
 
 class App extends React.Component {
@@ -35,24 +36,48 @@ class App extends React.Component {
     PageView()
   }
 
+  navigationLinks() {
+    return (
+      <>
+        <HeaderLink href="https://testandtrace.com/the-full-explanation">Overview</HeaderLink>
+        <HeaderLink href="https://testandtrace.com/state-data/">US State Data</HeaderLink>
+        <HeaderLink href="https://testandtrace.com/resources">Resources/Guides</HeaderLink>
+        <HeaderLink href="https://testandtrace.com/news/">News</HeaderLink>
+        <HeaderLink href="https://testandtrace.com/about-test-and-trace/">About Us</HeaderLink>
+        <HowYouCanHelpButton href="https://testandtrace.com/#how-you-can-help">How You Can Help</HowYouCanHelpButton>
+      </>
+    );
+  }
+
   render() {
     return (
       <div>
         <HeaderBar>
           <HeaderBarContent>
-            <HeaderLeftContianer>
+            <HeaderLeftContainer>
               <HeaderLink href="https://www.testandtrace.com">
                 <LogoImage src={logo} alt="logo" />
               </HeaderLink>
-            </HeaderLeftContianer>
-            <HeaderRightContianer>
-              <HeaderLink href="https://testandtrace.com/the-full-explanation">Overview</HeaderLink>
-              <HeaderLink href="https://testandtrace.com/state-data/">US State Data</HeaderLink>
-              <HeaderLink href="https://testandtrace.com/resources">Resources/Guides</HeaderLink>
-              <HeaderLink href="https://testandtrace.com/news/">News</HeaderLink>
-              <HeaderLink href="https://testandtrace.com/about-test-and-trace/">About Us</HeaderLink>
-              <HowYouCanHelpButton href="https://testandtrace.com/#how-you-can-help">How You Can Help</HowYouCanHelpButton>
-            </HeaderRightContianer>
+            </HeaderLeftContainer>
+            <HeaderRightContainer>
+              <ExpandedNavigation>
+                { this.navigationLinks() }
+              </ExpandedNavigation>
+              <HamburgerMenu>
+                <Tooltip
+                  interactive
+                  position='bottom-end'
+                  trigger='click'
+                  html={(
+                    <HamburgerMenuTooltipContent>
+                      { this.navigationLinks() }
+                    </HamburgerMenuTooltipContent>
+                  )}
+                >
+                  { '\u2630' }
+                </Tooltip>
+              </HamburgerMenu>
+            </HeaderRightContainer>
           </HeaderBarContent>
         </HeaderBar>
         <AppContent>
@@ -90,12 +115,12 @@ export default App;
 
 const HeaderBar = styled.div`
   align-items: center;
-  box-shadow: 0 0 10px rgba(0,0,0,.1)!important;
+  box-shadow: 0 0 10px rgba(0,0,0,.1) !important;
   background: white;
   display: flex;
   justify-content: center;
   position: fixed;
-  width: 100%;
+  width: 100vw;
 `;
 
 const HeaderBarContent = styled.div`
@@ -103,16 +128,23 @@ const HeaderBarContent = styled.div`
   display: flex;
   height: 93px;
   justify-content: space-between;
-  max-width: 1200px;
   width: 100%;
+
+  @media (min-width: 981px) {
+    max-width: 1200px;
+  }
 `;
 
-const HeaderLeftContianer = styled.div``;
-const HeaderRightContianer = styled.div``;
+const HeaderLeftContainer = styled.div``;
+const HeaderRightContainer = styled.div``;
 
 const LogoImage = styled.img`
-  height: 93px;
+  height: auto;
   width: 326px;
+
+   @media (max-width: 980px) {
+     width: 163px;
+   }
 `;
 
 const HeaderLink = styled.a`
@@ -125,6 +157,38 @@ const HeaderLink = styled.a`
   :hover {
     color: black;
     text-decoration: none;
+  }
+`;
+
+const HamburgerMenu = styled.div`
+  color: #3ba4a0;
+  cursor: pointer;
+  display: none;
+  height: 32px;
+  width: 32px;
+
+  @media (max-width: 1080px) {
+    display: block;  
+  }
+`;
+
+const HamburgerMenuTooltipContent = styled.div`
+  align-items: center;
+  background: white;
+  border-top-color: #3ba4a0;
+  border-radius: 3px;
+  border-top: 2px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1) !important;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 30px 10px;
+`;
+
+const ExpandedNavigation = styled.div`
+  display: none;
+
+  @media (min-width: 1081px) {
+    display: block;
   }
 `;
 
@@ -145,7 +209,12 @@ const HowYouCanHelpButton = styled.a`
 `;
 
 const AppContent = styled.div`
-  padding: 120px 88px 0 88px;
+  padding: 120px 30px 30px 30px;
+
+  @media (min-width: 981px) {
+    margin: auto;
+    max-width: 1200px;
+  }
 `;
 
 const AppContentHeader = styled.h1`
