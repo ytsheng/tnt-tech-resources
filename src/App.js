@@ -74,7 +74,9 @@ class App extends React.Component {
                     </HamburgerMenuTooltipContent>
                   )}
                 >
-                  { '\u2630' }
+                  <HamburgerIcon>
+                    { '\u2630' }
+                  </HamburgerIcon>
                 </Tooltip>
               </HamburgerMenu>
             </HeaderRightContainer>
@@ -161,15 +163,20 @@ const HeaderLink = styled.a`
 `;
 
 const HamburgerMenu = styled.div`
-  color: #3ba4a0;
-  cursor: pointer;
   display: none;
   height: 32px;
+  margin: 0 20px 12px 0;
   width: 32px;
 
   @media (max-width: 1080px) {
     display: block;  
   }
+`;
+
+const HamburgerIcon = styled.div`
+  color: #3ba4a0;
+  cursor: pointer;
+  font-size: 26px;
 `;
 
 const HamburgerMenuTooltipContent = styled.div`
