@@ -112,20 +112,11 @@ class App extends React.Component {
         [data]: !state[data],
       }
     })
-    // if (data === "all") {
-    //   for (const item in this.state) {
-    //     this.setState(function(state, props) {
-    //       return {
-    //         [item]: state["all"]
-    //       }
-    //     })
-    //   }
-    // } 
   }
 
-  setAll(bool) {
+  setAll(selected) {
     for (const item in this.state) {
-      this.setState( {[item]: bool})
+      this.setState( {[item]: selected})
     }
   }
 }
