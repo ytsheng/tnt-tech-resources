@@ -28,7 +28,9 @@ class App extends React.Component {
       movement_tracking: false,
       postcare_support: false,
       immunity_passport: false,
+      health_passport: false,
     };
+    this.setAll = this.setAll.bind(this)
   }
 
   componentDidMount() {
@@ -90,7 +92,7 @@ class App extends React.Component {
           <p className="App-header-intro">The following list covers all technological applications that are COVID-19 related.</p>
           <br/>
           <br/>
-          <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)}/>
+          <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)} setAll={this.setAll} />
           <br/>
           <br/>
           <AppList filter={this.state}/>
@@ -107,9 +109,24 @@ class App extends React.Component {
   onExploreClick(data) {
     this.setState(function(state, props) {
       return {
-        [data]: !state[data]
+        [data]: !state[data],
       }
     })
+    // if (data === "all") {
+    //   for (const item in this.state) {
+    //     this.setState(function(state, props) {
+    //       return {
+    //         [item]: state["all"]
+    //       }
+    //     })
+    //   }
+    // } 
+  }
+
+  setAll(bool) {
+    for (const item in this.state) {
+      this.setState( {[item]: bool})
+    }
   }
 }
 
