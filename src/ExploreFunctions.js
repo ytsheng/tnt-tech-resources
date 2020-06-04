@@ -1,6 +1,9 @@
 import React from 'react';
 import AppFunction from './AppFunction';
 import './ExploreFunctions.css';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class ExploreFunctions extends React.Component {
   render() {
@@ -8,6 +11,11 @@ class ExploreFunctions extends React.Component {
         <div>
             <p className="ExploreFunctions-header">Explore Functions:</p>
             <p>click on any type(s) of apps you are looking for</p>
+            <Button className="btn mr-3 mb-2 border-success text-success" variant="light" onClick={() => this.props.setAll(true)}>Select all</Button>
+            <Button className="btn mb-2 border-danger border-3 text-danger" variant="light" onClick={() => this.props.setAll(false)}>Clear all</Button>
+            <br />
+
+{" "}
 <AppFunction id="manual_contact_tracing" name="Manual Contact Tracing" activated={this.props.settings["manual_contact_tracing"]} onClick={(data) => this.props.onClick(data)}/>
 {" "}
 <AppFunction id="symptom_reporting" name="Symptom Reporting" activated={this.props.settings["symptom_reporting"]} onClick={(data) => this.props.onClick(data)}/>
