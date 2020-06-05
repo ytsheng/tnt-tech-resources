@@ -40,6 +40,8 @@ class AppItem extends React.Component {
                 target_audience={this.props.target_audience}
                 technologies={this.props.technologies}
                 country_coverage={this.props.country_coverage}
+                people={this.props.people}
+                organizations={this.props.organizations}
             />
             <br/>
         </div>
