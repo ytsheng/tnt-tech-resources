@@ -5,7 +5,6 @@ const ReactMarkdown = require('react-markdown')
 
 class AppItemDetails extends React.Component {
   render() {
-    console.log(this.props)
     const input = `
 #### Details
 ${this.props.details}
@@ -19,7 +18,7 @@ ${this.props.country_coverage}
 ${this.props.state_adoption}
 #### Target User Type
 ${this.props.target_audience}
-#### Creators:
+#### Creators
 ###### Organizations: ${this.props.organizations}
 ###### People: ${this.props.people}
 
