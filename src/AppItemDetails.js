@@ -18,6 +18,10 @@ ${this.props.country_coverage}
 ${this.props.state_adoption}
 #### Target User Type
 ${this.props.target_audience}
+#### Creators
+###### Organizations: ${this.props.organizations}
+###### People: ${this.props.people}
+
 `;
     return (
       <ReactMarkdown source={input} />
