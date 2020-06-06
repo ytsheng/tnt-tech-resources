@@ -4,7 +4,7 @@ import './App.css';
 import ExploreFunctions from './ExploreFunctions'
 import AppList from './AppList'
 import styled from '../node_modules/styled-components';
-import {PageView, initGA} from './Tracking';
+import {PageView, initGA, Event} from './Tracking';
 import { Tooltip } from '../node_modules/react-tippy';
 
 
@@ -112,12 +112,14 @@ class App extends React.Component {
         [data]: !state[data],
       }
     })
+    Event('EXPLORE_APPS', `${data} filter added`, 'FILTER');
   }
 
   setAll(selected) {
     for (const item in this.state) {
       this.setState( {[item]: selected})
     }
+    Event('EXPLORE_APPS', `set all to ${selected}`, 'FILTER');
   }
 }
 
