@@ -112,14 +112,14 @@ class App extends React.Component {
         [data]: !state[data],
       }
     })
-    Event('EXPLORE_APPS', `${data} filter added`, 'FILTER');
+    Event('tech-resources-explore-app', `${data} filter added`, 'filter');
   }
 
   setAll(selected) {
     for (const item in this.state) {
       this.setState( {[item]: selected})
     }
-    Event('EXPLORE_APPS', `set all to ${selected}`, 'FILTER');
+    Event('tech-resources-explore-app', `set all to ${selected}`, 'filter');
   }
 }
 
