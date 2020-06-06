@@ -1,44 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
 import logo from './tnt-logo.png';
 import './App.css';
-import ExploreFunctions from './ExploreFunctions'
-import AppList from './AppList'
-import styled from '../node_modules/styled-components';
-import {PageView, initGA} from './Tracking';
+import ExploreFunctions from './ExploreFunctions';
+import AppList from './AppList';
+import { PageView, initGA } from './Tracking';
 import { Tooltip } from '../node_modules/react-tippy';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      exposure_notification: false,
-      symptom_reporting: false,
-      manual_contact_tracing: true,
-      symptom_checker: false,
-      symptom_reporting: false,
-      lab_logistics: false,
-      information_and_statistics: false,
-      locate_testing_centers: false,
-      policy: false,
-      postcare_support: false,
-      business_readiness: false,
-      immunity_passport: false,
-      movement_tracking: false,
-      postcare_support: false,
-      immunity_passport: false,
-      health_passport: false,
-    };
-    this.setAll = this.setAll.bind(this)
-  }
-
-  componentDidMount() {
-    initGA('UA-57905986-8');
-    PageView()
-  }
-
-  navigationLinks() {
+  static navigationLinks() {
     return (
       <>
         <HeaderLink href="https://testandtrace.com/the-full-explanation">Overview</HeaderLink>
@@ -51,7 +22,48 @@ class App extends React.Component {
     );
   }
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      apps: {
+        exposure_notification: false,
+        symptom_reporting: false,
+        manual_contact_tracing: true,
+        symptom_checker: false,
+        lab_logistics: false,
+        information_and_statistics: false,
+        locate_testing_centers: false,
+        policy: false,
+        postcare_support: false,
+        business_readiness: false,
+        immunity_passport: false,
+        movement_tracking: false,
+        health_passport: false,
+      },
+    };
+    this.setAll = this.setAll.bind(this);
+  }
+
+  componentDidMount() {
+    initGA('UA-57905986-8');
+    PageView();
+  }
+
+  onExploreClick(data) {
+    const { apps } = this.state;
+    apps[data] = !apps[data];
+    this.setState({ apps });
+  }
+
+  setAll(selected) {
+    const { apps } = this.state;
+    Object.keys(apps).forEach((key) => { apps[key] = selected; });
+    this.setState({ apps });
+  }
+
   render() {
+    const { apps } = this.state;
     return (
       <div>
         <HeaderBar>
@@ -63,16 +75,16 @@ class App extends React.Component {
             </HeaderLeftContainer>
             <HeaderRightContainer>
               <ExpandedNavigation>
-                { this.navigationLinks() }
+                { this.navigationLinks }
               </ExpandedNavigation>
               <HamburgerMenu>
                 <Tooltip
                   interactive
-                  position='bottom-end'
-                  trigger='click'
+                  position="bottom-end"
+                  trigger="click"
                   html={(
                     <HamburgerMenuTooltipContent>
-                      { this.navigationLinks() }
+                      { this.navigationLinks }
                     </HamburgerMenuTooltipContent>
                   )}
                 >
@@ -86,38 +98,43 @@ class App extends React.Component {
         </HeaderBar>
         <AppContent>
           <AppContentHeader>The Best Contact Tracing Tech Resources</AppContentHeader>
-          <br/>
-          <br/>
+          <br />
+          <br />
           <p className="App-header-intro">Entrepreneurs, app developers, government agencies and more are working on a range of technologies for containing the COVID-19 outbreak in the United States.They include mobile and web-based solutions designed to facilitate activities such as contact tracing and screening for symptoms of the coronavirus.</p>
           <p className="App-header-intro">The following list covers all technological applications that are COVID-19 related.</p>
-          <br/>
-          <br/>
-          <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)} setAll={this.setAll} />
-          <br/>
-          <br/>
-          <AppList filter={this.state}/>
-          <br/>
-          <br/>
-          <p>Made with love by the #testandtrace team. Underlying table source is the <a href="https://airtable.com/tblgxtCyYsFZBHdfE/viwoUzldDFDZnm6fo">Covid Tech Solutions</a> table.</p>
-          <p>Please join the #tech-resources channel on our <a href="https://testandtrace.slack.com/join/shared_invite/zt-dr5fzg7o-M3g~en8Z1F4o8kX7pOpYtg#/">slack</a> if you are willing to help us improve the data.</p>
-          <p>Please join the #engineering channel on our <a href="https://testandtrace.slack.com/join/shared_invite/zt-dr5fzg7o-M3g~en8Z1F4o8kX7pOpYtg#/">slack</a> if you are willing to help us build more features for this website.</p>
+          <br />
+          <br />
+          <ExploreFunctions
+            settings={apps}
+            onClick={(data) => this.onExploreClick(data)}
+            setAll={this.setAll}
+          />
+          <br />
+          <br />
+          <AppList filter={apps} />
+          <br />
+          <br />
+          <p>
+            Made with love by the #testandtrace team. Underlying table source is the
+            <a href="https://airtable.com/tblgxtCyYsFZBHdfE/viwoUzldDFDZnm6fo">Covid Tech Solutions</a>
+            {' '}
+            table.
+          </p>
+          <p>
+            Please join the #tech-resources channel on our
+            <a href="https://testandtrace.slack.com/join/shared_invite/zt-dr5fzg7o-M3g~en8Z1F4o8kX7pOpYtg#/">slack</a>
+            {' '}
+            if you are willing to help us improve the data.
+          </p>
+          <p>
+            Please join the #engineering channel on our
+            <a href="https://testandtrace.slack.com/join/shared_invite/zt-dr5fzg7o-M3g~en8Z1F4o8kX7pOpYtg#/">slack</a>
+            {' '}
+            if you are willing to help us build more features for this website.
+          </p>
         </AppContent>
       </div>
     );
-  }
-
-  onExploreClick(data) {
-    this.setState(function(state, props) {
-      return {
-        [data]: !state[data],
-      }
-    })
-  }
-
-  setAll(selected) {
-    for (const item in this.state) {
-      this.setState( {[item]: selected})
-    }
   }
 }
 
