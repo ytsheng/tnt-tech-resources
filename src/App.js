@@ -7,6 +7,8 @@ import AppList from './AppList';
 import { PageView, initGA } from './Tracking';
 import { Tooltip } from '../node_modules/react-tippy';
 
+require('dotenv').config();
+
 
 class App extends React.Component {
   static navigationLinks() {
@@ -46,7 +48,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    initGA('UA-57905986-8');
+    initGA(process.env.GA_TRACKING_ID);
     PageView();
   }
 
