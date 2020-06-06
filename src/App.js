@@ -4,7 +4,7 @@ import logo from './tnt-logo.png';
 import './App.css';
 import ExploreFunctions from './ExploreFunctions';
 import AppList from './AppList';
-import { PageView, initGA, Event } from './Tracking';
+import { PageView, initGA } from './Tracking';
 import { Tooltip } from '../node_modules/react-tippy';
 
 
@@ -54,14 +54,12 @@ class App extends React.Component {
     const { apps } = this.state;
     apps[data] = !apps[data];
     this.setState({ apps });
-    Event('EXPLORE_APPS', `${data} filter added`, 'FILTER');
   }
 
   setAll(selected) {
     const { apps } = this.state;
     Object.keys(apps).forEach((key) => { apps[key] = selected; });
     this.setState({ apps });
-    Event('EXPLORE_APPS', `set all to ${selected}`, 'FILTER');
   }
 
   render() {
