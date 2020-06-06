@@ -1,13 +1,13 @@
-import ReactGA from "react-ga";
+import ReactGA from 'react-ga';
 
 
 export const initGA = (trackingID) => {
   ReactGA.initialize(trackingID);
-}
+};
 
 export const PageView = () => {
-  ReactGA.pageview("resources.testandtrace.com" + window.location.pathname + window.location.search);
-}
+  ReactGA.pageview(`resources.testandtrace.com${window.location.pathname}${window.location.search}`);
+};
 
 /**
  * Event - Add custom tracking event.
@@ -17,8 +17,8 @@ export const PageView = () => {
  */
 export const Event = (category, action, label) => {
   ReactGA.event({
-    category: category,
-    action: action,
-    label: label
+    category,
+    action,
+    label,
   });
 };
