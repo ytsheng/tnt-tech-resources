@@ -1,38 +1,53 @@
 import React from 'react';
 import logo from './tnt-logo.png';
 import './App.css';
+import AirtableClient from './airtableClient';
 import ExploreFunctions from './ExploreFunctions'
-import AppListNew from './AppListNew'
+import AppList from './AppList'
 import styled from '../node_modules/styled-components';
 import {PageView, initGA} from './Tracking';
 import { Tooltip } from '../node_modules/react-tippy';
-import testData from './test.json';
+
+const { getTableData } = AirtableClient();
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      exposure_notification: false,
-      symptom_reporting: false,
-      manual_contact_tracing: true,
-      symptom_checker: false,
-      lab_logistics: false,
-      information_and_statistics: false,
-      locate_testing_centers: false,
-      policy: false,
-      postcare_support: false,
-      business_readiness: false,
-      immunity_passport: false,
-      movement_tracking: false,
-      health_passport: false,
+      functionFilters: {
+        exposure_notification: false,
+        symptom_reporting: false,
+        manual_contact_tracing: true,
+        symptom_checker: false,
+        lab_logistics: false,
+        information_and_statistics: false,
+        locate_testing_centers: false,
+        policy: false,
+        postcare_support: false,
+        business_readiness: false,
+        immunity_passport: false,
+        movement_tracking: false,
+        health_passport: false,
+      },
+      currentTableData: [],
     };
     this.setAll = this.setAll.bind(this)
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     initGA('UA-57905986-8');
     PageView()
+    try {
+      const { data: currentTableData } = await getTableData();
+      this.setState({ currentTableData })
+    } catch (error) {
+      // XXX: We should assume that calls to get Airtable data will occasionally fail
+      // and handle them so we so we don't cause runtime errors on the site. Because these
+      // errors are likely to be transient, here we just swallow them, resulting in the previous
+      // table data being loaded. Downstream, we conditionally render a 'No Data Available' message
+      // if currentTableData is an empty array.
+    }
   }
 
   navigationLinks() {
@@ -89,15 +104,10 @@ class App extends React.Component {
           <p className="App-header-intro">The following list covers all technological applications that are COVID-19 related.</p>
           <br/>
           <br/>
-          <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)} setAll={this.setAll} />
+          <ExploreFunctions settings={this.state.functionFilters} onClick={(data) => this.onExploreClick(data)} setAll={this.setAll} />
           <br/>
           <br/>
-          {/*
-            TODO: Add a hook/componentDidMount method for fetching data from Airtable
-            to store in the state object & pass in here. Pass in static test data
-            for now to fine tune the data mapping for downstream components
-          */}
-          <AppListNew masterList={testData} functionFilters={this.state}/>
+          <AppList masterList={this.state.currentTableData} functionFilters={this.state.functionFilters}/>
           <br/>
           <br/>
           <p>Made with love by the #testandtrace team. Underlying table source is the <a href="https://airtable.com/tblgxtCyYsFZBHdfE/viwoUzldDFDZnm6fo">Covid Tech Solutions</a> table.</p>
@@ -109,17 +119,29 @@ class App extends React.Component {
   }
 
   onExploreClick(data) {
-    this.setState(function(state, props) {
-      return {
-        [data]: !state[data],
-      }
-    })
+    this.setState(state => ({
+        functionFilters: {
+          ...state.functionFilters,
+          [data]: !state.functionFilters[data],
+        }
+      })
+    )
   }
 
-  setAll(selected) {
-    for (const item in this.state) {
-      this.setState( {[item]: selected})
-    }
+  setAll(isSelected) {
+    // Create a new functionFilters object with all values set to true
+    // or false depending on the value of isSelected
+    const functionFiltersAllSet = Object.keys(this.state.functionFilters)
+      .reduce((acc, currentFilter) => {
+        return ({
+          ...acc,
+          [currentFilter]: isSelected
+        })
+      }, {})
+    // Call setState once with the new object
+    this.setState({
+      functionFilters: functionFiltersAllSet,
+    })
   }
 }
 
