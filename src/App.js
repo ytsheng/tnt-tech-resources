@@ -17,7 +17,6 @@ class App extends React.Component {
       symptom_reporting: false,
       manual_contact_tracing: true,
       symptom_checker: false,
-      symptom_reporting: false,
       lab_logistics: false,
       information_and_statistics: false,
       locate_testing_centers: false,
@@ -26,8 +25,6 @@ class App extends React.Component {
       business_readiness: false,
       immunity_passport: false,
       movement_tracking: false,
-      postcare_support: false,
-      immunity_passport: false,
       health_passport: false,
     };
     this.setAll = this.setAll.bind(this)
