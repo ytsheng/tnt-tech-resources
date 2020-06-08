@@ -18,11 +18,12 @@ ${this.props.country_coverage}
 ${this.props.state_adoption}
 #### Target User Type
 ${this.props.target_audience}
-#### Creators
-###### Organizations: ${this.props.organizations}
-###### People: ${this.props.people}
-
 `;
+// XXX: These fields do not not seem to map to any columns the current Master List
+// #### Creators
+// ###### Organizations: ${this.props.organizations}
+// ###### People: ${this.props.people}
+
     return (
       <ReactMarkdown source={input} />
     )

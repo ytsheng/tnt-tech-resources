@@ -2,11 +2,11 @@ import React from 'react';
 import logo from './tnt-logo.png';
 import './App.css';
 import ExploreFunctions from './ExploreFunctions'
-import AppList from './AppList'
+import AppListNew from './AppListNew'
 import styled from '../node_modules/styled-components';
 import {PageView, initGA} from './Tracking';
 import { Tooltip } from '../node_modules/react-tippy';
-
+import testData from './test.json';
 
 class App extends React.Component {
   constructor(props) {
@@ -92,7 +92,12 @@ class App extends React.Component {
           <ExploreFunctions settings={this.state} onClick={(data) => this.onExploreClick(data)} setAll={this.setAll} />
           <br/>
           <br/>
-          <AppList filter={this.state}/>
+          {/*
+            TODO: Add a hook/componentDidMount method for fetching data from Airtable
+            to store in the state object & pass in here. Pass in static test data
+            for now to fine tune the data mapping for downstream components
+          */}
+          <AppListNew masterList={testData} functionFilters={this.state}/>
           <br/>
           <br/>
           <p>Made with love by the #testandtrace team. Underlying table source is the <a href="https://airtable.com/tblgxtCyYsFZBHdfE/viwoUzldDFDZnm6fo">Covid Tech Solutions</a> table.</p>

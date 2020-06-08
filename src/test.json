@@ -1,0 +1,510 @@
+[
+  {
+      "id": "rec0HGpkmyfYKMJbY",
+      "fields": {
+          "Solution Name": "Coronamap",
+          "Type": "App",
+          "Description": "COVID-19 Status Map for South Korea",
+          "Project Status": "Released",
+          "Functions": [
+              "Exposure Notification"
+          ],
+          "Technologies": [
+              "Map"
+          ],
+          "Exposure Notifications API": "Not applicable",
+          "Supported Platforms": [
+              "Web"
+          ],
+          "Target Audience": [
+              "General Public"
+          ],
+          "User Installation Required?": "No",
+          "Adoption Regions": [
+              "South Korea"
+          ],
+          "Country Coverage": [
+              "S. Korea"
+          ],
+          "Related Links": [
+              "https://coronamap.site"
+          ],
+          "Languages": [
+              "Korean",
+              "English"
+          ],
+          "Maintainers": "Daniel Heppner",
+          "Collaborators": [
+              {
+                  "id": "usrWOOEGkdeM4q88f",
+                  "email": "daniel.heppner1@gmail.com",
+                  "name": "Daniel Heppner"
+              }
+          ],
+          "Last Updated": "2020-05-24T20:14:28.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec0brMs4rAwITyy9",
+      "fields": {
+          "Solution Name": "Private Tracer",
+          "Type": "App",
+          "Description": "PrivateTracer is a smartphone app for 'contact tracing' in which safeguarding privacy, safety and ethics are the starting points for the design.  The app ensures that users receive a notification if they have been with someone who has tested positive for a certain period of time.  This enables users to act independently on the basis of measures and / or advice instituted by the Ministry of Health, Welfare and Sport (VWS) and thereby break the transmission chain. ",
+          "Project Status": "Unknown",
+          "Technologies": [
+              "Bluetooth",
+              "DP-3T",
+              "Google/Apple"
+          ],
+          "Exposure Notifications API": "Planned",
+          "Supported Platforms": [
+              "iOS",
+              "Android"
+          ],
+          "User Installation Required?": "Yes",
+          "Revenue Model": [
+              "Free for consumer"
+          ],
+          "Country Coverage": [
+              "Netherlands"
+          ],
+          "Organizations": [
+              "reco4dmIsC85SjeIe",
+              "recqnv6oTNIdAjgDn"
+          ],
+          "Languages": [
+              "Dutch"
+          ],
+          "Maintainers": "Pete Castleton",
+          "Collaborators": [
+              {
+                  "id": "usruhLV6oqnRLDFSK",
+                  "email": "tuesaysingh@gmail.com",
+                  "name": "Tuesay Singh"
+              }
+          ],
+          "Last Updated": "2020-05-30T21:47:44.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec1gaPQ6G8DGsp3u",
+      "fields": {
+          "Solution Name": "CoEpi",
+          "Type": "App",
+          "Description": "CoEpi relies on voluntary symptom sharing. The system notifies users about potential exposures based on Bluetooth proximity-based exposures.",
+          "Project Status": "In Development",
+          "Functions": [
+              "Exposure Notification",
+              "Symptom Reporting",
+              "Symptom Checker"
+          ],
+          "Technologies": [
+              "Bluetooth",
+              "TCN Protocol",
+              "Open Source"
+          ],
+          "Supported Platforms": [
+              "Android",
+              "iOS"
+          ],
+          "Homepage": "https://coepi.org",
+          "Target Audience": [
+              "General Public"
+          ],
+          "Revenue Model": [
+              "Free"
+          ],
+          "Country Coverage": [
+              "United States"
+          ],
+          "Organizations": [
+              "rect9vs284ZjSxMB6",
+              "recKWZ8MpelD0XyrH"
+          ],
+          "People": [
+              "recvIVKNCAMy7r7gL",
+              "recWqfRaUQMg52brB"
+          ],
+          "Related Links": [
+              "https://coepi.org"
+          ],
+          "Languages": [
+              "English"
+          ],
+          "Additional Notes": "Very closely aligned with Covid Watch",
+          "Maintainers": "Daniel Heppner",
+          "Collaborators": [
+              {
+                  "id": "usrWOOEGkdeM4q88f",
+                  "email": "daniel.heppner1@gmail.com",
+                  "name": "Daniel Heppner"
+              }
+          ],
+          "Last Updated": "2020-05-23T18:47:45.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec1orq9GXp5uWSp4",
+      "fields": {
+          "Solution Name": "EpiCollect",
+          "Type": "App",
+          "Project Status": "Released",
+          "Functions": [
+              "Information and Statistics"
+          ],
+          "Technologies": [
+              "GPS",
+              "Map",
+              "Open Source"
+          ],
+          "Homepage": "https://epi-collect.org/",
+          "Target Audience": [
+              "General Public"
+          ],
+          "User Installation Required?": "No",
+          "Country Coverage": [
+              "Global"
+          ],
+          "Additional Notes": "Converts users' Google location data into a format usable by researchers who use contact tracing. Data is anonymized ",
+          "Maintainers": "Eric Sun",
+          "Collaborators": [
+              {
+                  "id": "usrcEKGP4Z83Cc2nD",
+                  "email": "esun1999@gmail.com",
+                  "name": "Eric Sun"
+              }
+          ],
+          "Last Updated": "2020-06-04T18:32:31.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec24N05uNEZg8WgN",
+      "fields": {
+          "Solution Name": "MIT Safe Paths",
+          "Type": "App",
+          "Description": "Safe Paths = App for Everyone. MIT’s Safe Paths platform involves a smartphone application, PrivateKit, and a web application, Safe Places. Safe Paths is a global movement to develop free, open-source, privacy-by-design tools for residents, public health officials, and larger communities to flatten the curve of COVID-19, reduce fear, and prevent a surveillance-state response to the pandemic.",
+          "Project Status": "Released",
+          "Functions": [
+              "Exposure Notification"
+          ],
+          "Technologies": [
+              "Bluetooth",
+              "GPS",
+              "Decentralized",
+              "Open Source"
+          ],
+          "Exposure Notifications API": "Planned",
+          "Supported Platforms": [
+              "Web",
+              "Smartphone",
+              "iOS",
+              "Android"
+          ],
+          "Homepage": "https://covidsafepaths.org",
+          "Target Audience": [
+              "General Public"
+          ],
+          "User Installation Required?": "Yes",
+          "Revenue Model": [
+              "Free for consumer"
+          ],
+          "Adoption Regions": [
+              "United States"
+          ],
+          "Adoption Scale": "unknown",
+          "Country Coverage": [
+              "United States"
+          ],
+          "Organizations": [
+              "rec1xDbK76BFrTERH"
+          ],
+          "Related Links": [
+              "https://www.media.mit.edu/projects/safepaths/overview/"
+          ],
+          "Languages": [
+              "English"
+          ],
+          "Maintainers": "Stephanie Cook",
+          "Collaborators": [
+              {
+                  "id": "usrsZFLlE1ja7lNjV",
+                  "email": "stephanie.e.tucker@gmail.com",
+                  "name": "Stephanie Cook"
+              }
+          ],
+          "Last Updated": "2020-06-05T23:58:57.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec2AH2h9t32gMbbq",
+      "fields": {
+          "Solution Name": "Germany's Corona App",
+          "Type": "App",
+          "Description": "Germany opted for the Google/Apple API after initially aiming to build a centralized system.",
+          "Project Status": "Unknown",
+          "Functions": [
+              "Exposure Notification"
+          ],
+          "Technologies": [
+              "Bluetooth"
+          ],
+          "Exposure Notifications API": "Planned",
+          "Supported Platforms": [
+              "iOS",
+              "Android"
+          ],
+          "Related Links": [
+              "https://www.fraunhofer.de/en/press/research-news/2020/april/fraunhofer-develops-anti-sars-cov-2-app.html"
+          ],
+          "Maintainers": "Pete Castleton",
+          "Collaborators": [
+              {
+                  "id": "usruhLV6oqnRLDFSK",
+                  "email": "tuesaysingh@gmail.com",
+                  "name": "Tuesay Singh"
+              }
+          ],
+          "Last Updated": "2020-06-06T18:41:21.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec2iEihGjyWJkgIt",
+      "fields": {
+          "Solution Name": "Hi5X",
+          "Type": "App",
+          "Description": "Hi5X is a simple yet effective way to manage your everyday life contacts. A contact is recorded easily by a quick QR code or a Bluetooth scan.",
+          "Project Status": "Released",
+          "Functions": [
+              "Exposure Notification"
+          ],
+          "Technologies": [
+              "QR",
+              "Bluetooth"
+          ],
+          "Supported Platforms": [
+              "iOS"
+          ],
+          "Homepage": "https://hi5x-app.com/",
+          "Target Audience": [
+              "General Public"
+          ],
+          "User Installation Required?": "Yes",
+          "Revenue Model": [
+              "Free for consumer"
+          ],
+          "Languages": [
+              "English"
+          ],
+          "Collaborators": [
+              {
+                  "id": "usrOTmMyDqKF0EU56",
+                  "email": "sashaplugo@gmail.com",
+                  "name": "Sasha Perez"
+              }
+          ],
+          "Last Updated": "2020-06-06T22:34:51.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec3EpQjoXZx1bmXo",
+      "fields": {
+          "Solution Name": "EH: Africa CT Solution",
+          "Type": "App",
+          "Project Status": "In Development",
+          "Functions": [
+              "Exposure Notification"
+          ],
+          "Country Coverage": [
+              "United Kingdom",
+              "Ghana"
+          ],
+          "Organizations": [
+              "recspGCrQcCBb65HC"
+          ],
+          "People": [
+              "reckXPiQr2aAKvUr8",
+              "recG8TqTmgVLjbn8r"
+          ],
+          "Maintainers": "Daniel Heppner",
+          "Collaborators": [
+              {
+                  "id": "usrWOOEGkdeM4q88f",
+                  "email": "daniel.heppner1@gmail.com",
+                  "name": "Daniel Heppner"
+              }
+          ],
+          "Last Updated": "2020-05-23T00:48:22.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec3IWjB6qR5VTho0",
+      "fields": {
+          "Solution Name": "Tile",
+          "Type": "Hardware",
+          "Project Status": "In Development",
+          "Functions": [
+              "Exposure Notification",
+              "Business Readiness"
+          ],
+          "Technologies": [
+              "Bluetooth"
+          ],
+          "Supported Platforms": [
+              "IOT"
+          ],
+          "Target Audience": [
+              "Business Owners"
+          ],
+          "Revenue Model": [
+              "Paid"
+          ],
+          "Organizations": [
+              "recH1RAf4mb4GGfzD"
+          ],
+          "Last Updated": "2020-05-23T00:54:22.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec3JN428l4sg1VDt",
+      "fields": {
+          "Solution Name": "SafeTrace",
+          "Type": "App",
+          "Description": "Introducing SafeTrace on Citizen — your daily app for staying informed, safe, and protected from COVID-19. Get up-to-date information about the virus on the state, city, and county levels, and get notified when you’ve been in contact with someone who tests positive.",
+          "Project Status": "Released",
+          "Functions": [
+              "Exposure Notification"
+          ],
+          "Technologies": [
+              "Bluetooth"
+          ],
+          "Exposure Notifications API": "Unknown",
+          "Supported Platforms": [
+              "Android",
+              "iOS"
+          ],
+          "Homepage": "https://citizen.com/safetrace",
+          "Target Audience": [
+              "General Public"
+          ],
+          "User Installation Required?": "Yes",
+          "Revenue Model": [
+              "Free for consumer"
+          ],
+          "Adoption Regions": [
+              "United States"
+          ],
+          "Adoption Scale": "unknown",
+          "Country Coverage": [
+              "United States"
+          ],
+          "Organizations": [
+              "rec0sHkUQnTLc6jQ3",
+              "rec1b6hHJ1yiZuRPL"
+          ],
+          "Maintainers": "Stephanie Cook",
+          "Collaborators": [
+              {
+                  "id": "usrsZFLlE1ja7lNjV",
+                  "email": "stephanie.e.tucker@gmail.com",
+                  "name": "Stephanie Cook"
+              }
+          ],
+          "Last Updated": "2020-06-05T23:59:37.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec3KjQZVSi3z13vj",
+      "fields": {
+          "Solution Name": "Alams Healium",
+          "Type": "Unknown",
+          "Project Status": "Proposal",
+          "Functions": [
+              "Exposure Notification",
+              "Information and Statistics"
+          ],
+          "Technologies": [
+              "Bluetooth",
+              "Wi-Fi Tracking",
+              "GPS"
+          ],
+          "Homepage": "https://docs.google.com/presentation/d/17-haXK2msLgnFw9qLMhM_z7_PLdgwUMocLELdXQqD1M/edit#slide=id.p",
+          "Languages": [
+              "English",
+              "Urdu"
+          ],
+          "Maintainers": "Apoorva Patki",
+          "Collaborators": [
+              {
+                  "id": "usr2gdM8sezeXeCkc",
+                  "email": "apoorvapatki2212@gmail.com",
+                  "name": "Apoorva Patki"
+              }
+          ],
+          "Last Updated": "2020-05-29T01:49:06.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec3aZ2qz34HyDuab",
+      "fields": {
+          "Solution Name": "Model DPA",
+          "Type": "Other",
+          "Description": "Model Data Protection Agreement for covid-19 related technology",
+          "Project Status": "Released",
+          "Functions": [
+              "Policy"
+          ],
+          "Homepage": "https://law.mit.edu/pub/modeldpaforgovernment/release/1",
+          "Target Audience": [
+              "Governments",
+              "Public Health Authority",
+              "Technology Companies"
+          ],
+          "Revenue Model": [
+              "Free"
+          ],
+          "Country Coverage": [
+              "United States"
+          ],
+          "Organizations": [
+              "rec1Aq7TgjRRYQchJ"
+          ],
+          "People": [
+              "rec8xbYwtb3yvS5cZ"
+          ],
+          "Languages": [
+              "English"
+          ],
+          "Last Updated": "2020-05-23T00:54:22.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  },
+  {
+      "id": "rec4XzIuENO5EDrKV",
+      "fields": {
+          "Solution Name": "Merit",
+          "Type": "App",
+          "Project Status": "Unknown",
+          "Maintainers": "Pete Castleton",
+          "Collaborators": [
+              {
+                  "id": "usruhLV6oqnRLDFSK",
+                  "email": "tuesaysingh@gmail.com",
+                  "name": "Tuesay Singh"
+              }
+          ],
+          "Last Updated": "2020-05-30T21:47:40.000Z"
+      },
+      "createdTime": "2020-05-23T00:29:39.000Z"
+  }
+]
