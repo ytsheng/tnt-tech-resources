@@ -16,8 +16,6 @@ ${this.props.technologies}
 ${this.props.country_coverage}
 #### States Adoption
 ${this.props.state_adoption}
-#### Target User Type
-${this.props.target_audience}
 #### Creators
 ###### Organizations: ${this.props.organizations}
 ###### People: ${this.props.people}
