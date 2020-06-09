@@ -11,6 +11,7 @@ class AppFunction extends React.Component {
         className="mb-2"
         variant="primary"
         size="lg"
+        style={{ fontWeight: 'bold' }}
         onClick={() => this.onClick(this.props.id)}>
         {this.props.name}
       </Button>
