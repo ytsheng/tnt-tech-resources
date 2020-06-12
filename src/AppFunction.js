@@ -10,7 +10,7 @@ class AppFunction extends React.Component {
     var button;
     if (this.props.activated) {
       button = <Tooltip
-        title={this.props.name}>
+        title={this.props.description}>
             <Button
                 className="mb-2"
                 variant="primary"
@@ -21,7 +21,7 @@ class AppFunction extends React.Component {
         </Tooltip>
     } else {
       button = <Tooltip
-        title={this.props.name}>
+        title={this.props.description}>
             <Button
             className="mb-2"
             variant="secondary"
