@@ -16,15 +16,13 @@ class ExploreFunctions extends React.Component {
             <br />
 
 {" "}
+<AppFunction id="exposure_notification" name="Exposure Notification" activated={this.props.settings["exposure_notification"]} onClick={(data) => this.props.onClick(data)}/>
+{" "}
 <AppFunction id="manual_contact_tracing" name="Manual Contact Tracing" activated={this.props.settings["manual_contact_tracing"]} onClick={(data) => this.props.onClick(data)}/>
 {" "}
 <AppFunction id="symptom_reporting" name="Symptom Reporting" activated={this.props.settings["symptom_reporting"]} onClick={(data) => this.props.onClick(data)}/>
 {" "}
-<AppFunction id="exposure_notification" name="Exposure Notification" activated={this.props.settings["exposure_notification"]} onClick={(data) => this.props.onClick(data)}/>
-{" "}
 <AppFunction id="lab_logistics" name="Lab Logistics" activated={this.props.settings["lab_logistics"]} onClick={(data) => this.props.onClick(data)}/>
-{" "}
-<AppFunction id="policy" name="Policy" activated={this.props.settings["policy"]} onClick={(data) => this.props.onClick(data)}/>
 {" "}
 <AppFunction id="symptom_checker" name="Symptom Checker" activated={this.props.settings["symptom_checker"]} onClick={(data) => this.props.onClick(data)}/>
 {" "}
