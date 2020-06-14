@@ -17,6 +17,7 @@ class AppItem extends React.Component {
             <table className="Table">
                 <tbody>
                     <tr>
+                        <td className="Cell-header"><strong>Target user</strong></td>
                         <td className="Cell-header"><strong>What platforms is it on?</strong></td>
                         <td className="Cell-header"><strong>Free?</strong></td>
                         <td className="Cell-header"><strong>User Installation Required?</strong></td>
@@ -24,6 +25,7 @@ class AppItem extends React.Component {
                         <td className="Cell-header"><strong>Exposure Notification API Compliant</strong></td>
                     </tr>
                     <tr>
+                        <td className="Cell">{this.props.target_audience}</td>
                         <td className="Cell">{this.props.platforms}</td>
                         <td className="Cell">{this.props.is_free}</td>
                         <td className="Cell">{this.props.is_optin}</td>
@@ -37,7 +39,6 @@ class AppItem extends React.Component {
                 details={this.props.details}
                 functions={this.props.functions}
                 state_adoption={this.props.state_adoption}
-                target_audience={this.props.target_audience}
                 technologies={this.props.technologies}
                 country_coverage={this.props.country_coverage}
                 people={this.props.people}
