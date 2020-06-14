@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(30px + 2vmin);
   color: black;
   margin-bottom: 0;
 }
