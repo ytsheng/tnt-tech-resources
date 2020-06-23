@@ -9,7 +9,7 @@ class AppItemDetails extends React.Component {
 #### Details
 ${this.props.details}
 #### Functions
-${this.props.functions}
+**${this.props.functions}**
 #### Tech Used
 ${this.props.technologies}
 #### Country Coverage
