@@ -4,7 +4,7 @@ import './App.css';
 import ExploreFunctions from './ExploreFunctions'
 import AppList from './AppList'
 import styled from '../node_modules/styled-components';
-import {PageView, initGA} from './Tracking';
+import {PageView, initGA, Event} from './Tracking';
 import { Tooltip } from '../node_modules/react-tippy';
 
 
@@ -111,12 +111,14 @@ class App extends React.Component {
         [data]: !state[data],
       }
     })
+    Event('tech-resources-explore-app', `${data} filter added`, 'filter');
   }
 
   setAll(selected) {
     for (const item in this.state) {
       this.setState( {[item]: selected})
     }
+    Event('tech-resources-explore-app', `set all to ${selected}`, 'filter');
   }
 }
 
